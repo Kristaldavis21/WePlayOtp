@@ -1,3 +1,30 @@
 h1{
     color: greenyellow;
 }
+
+marquee{
+    font-size: 100px;
+    font-weight: 700;
+    color: limegreen;
+    background-color: #008cff;
+    font-family: sans-serif;
+    height: 100px;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .slide-show {
+        width: 800px;
+        height: 600px;
+    }
+
+    .slide-show-image {
+        width: 2400px;
+        height: 600px;
+        position: relative;
+        transition: left 2s;
+    }
+
+    
