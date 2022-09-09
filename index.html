@@ -5,16 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>We Play OTP</title>
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="./css/index.css" />
   </head>
 
   <body onload="main()">
     <!-- <img src="./images/basketball.jpg" alt=""> -->
-    <marquee>We Play Outside the Perimeter</marquee>
-
+    <marquee>Find the activity to go with the Weather</marquee>
     <form id="search">
       <fieldset>
-        <legend>Search for things to do:</legend>
+        <legend>Search for your Weather-Rec :</legend>
         <label for="city">City:</label><br />
         <input
           type="text"
@@ -31,56 +30,15 @@
           title="upper/lowercase letters only"
           placeholder="Enter Text Here"
         /><br /><br />
-        <select>
-          <option>Parks</option>
-          <option>Playgrounds</option>
-          <option>Dog Parks</option>
-          <option>Basketball Courts</option></select
-        ><br /><br />
         <button id="submit-info" type="submit">Submit</button>
       </fieldset>
     </form>
+    <div id="temp"></div>
+    <div class="weather-icon" img src="./icons/unknown.png"></div>
+    <div id="activity"></div>
 
-    <!-- <div class="slide-show">
-            <div clas="slide-show-image">
-                <img src="./images/basketball.jpg" class="slide-image" alt="basketball" style="width:100px">
-                <img src="./images/dogpark.jpg" class="slide-image" alt="dogpark" style="width:100px">
-                <img src="./images/park.jpg" class="slide-image" alt="park" style="width:100px">
-                <img src="./images/playground.jpg" class="slide-image" alt="playground" style="width:100px">
-            </div>
-        </div> -->
 
-    <!-- <h2>Automatic Slideshow</h2>
-            <p>Change image every 2 seconds:</p>
-            
-            <div class="slideshow-container">
-            
-            <div class="mySlides fade">
-              <div class="numbertext">1 / 3</div>
-              <img src="./images/playground.jpg" style="width:100px">
-              <div class="text">Caption Text</div>
-            </div>
-            
-            <div class="mySlides fade1">
-              <div class="numbertext">2 / 3</div>
-              <img src="./images/basketball.jpg" alt="">
-              <div class="text">Caption Two</div>
-            </div>
-            
-            <div class="mySlides fade">
-              <div class="numbertext">3 / 3</div>
-              <img src="./images/basketball.jpg" style="width:100%">
-              <div class="text">Caption Three</div>
-            </div>
-            
-            </div>
-            <br>
-            
-            <div style="text-align:center">
-              <span class="dot"></span> 
-              <span class="dot"></span> 
-              <span class="dot"></span> 
-            </div> -->
   </body>
-  <script src="./index.js"></script>
+  <script src="js/index.js"></script>
+  <script src="https://kit.fontawesome.com/58537567b9.js" crossorigin="anonymous"></script>
 </html>

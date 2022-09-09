@@ -24,43 +24,55 @@ function main() {
         cityData(inputCityName, inputStateName);
     
     });
-    function cityData(inputCityName, inputStateName) {
+    async function cityData(inputCityName, inputStateName) {
         
         // let key = "e1b480b407514a736d3c17c9bfa33c0cc"; 
 
         let key = "1b480b407514a736d3c17c9bfa33c0cc";
 
-        let api = fetch(`https://api.openweathermap.org/data/2.5/weather?q=${inputCityName}&appid=${key}`)
+        let cityId = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${inputCityName}&appid=${key}`)
                 .then((response)=> response.json())
                 .then((data) => {
                     
                     console.log(data);
 
-                    const id = data.id;
-
                     console.log(data.id);
 
-                    return id;
+                    return data.id;
+
              })
 
+             console.log(cityId);
 
 
 
-  //       let api = fetch(`https://api.openweathermap.org/data/2.5/weather?q=${inputCityName}&appid=${key}`, {
-  //         method: 'get',
-  //         }).then(function(response) {  
-  //           response.json().then(function(data) {  
-  //           fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityid}&appid=${key}`)
-  //           .then(function(response) {
-  //           return response.json();
-  //           }).catch(function() {
-  //             console.log("This is the weather");
-  //             });
-  //         });  
-  //       }) 
-  //  .catch(function(error) {  
-  //    console.log('Request failed', error)  
-  //  });
+        fetch(`https://api.openweathermap.org/data/2.5/weather?id=${cityId}&appid=${key}&units=imperial`)
+             .then((response) => response.json())
+             .then((weather) => {
+
+                console.log(weather);
+
+                const tempElement = document.getElementById('temp');
+
+                let locationIcon = document.getElementById('.weather-icon');
+                const icon = weather.weather[0].icon;
+
+                tempElement.innerHTML = `<p>The temperature is... ${weather.main.temp} ${weather.weather[0].description}</p>`
+                locationIcon.innerHTML =`<img src="./icons/${weather.weather[0].icon}.png"</div>`;
+             })
+
+            //  fetch(`http://www.boredapi.com/api/activity?type=recreational`)
+            //  .then((response) => response.json())
+            //  .then((activity) => {
+                 
+            //      console.log(activity);
+
+            //      const randomActivity = document.getElementById('activity');
+
+            //      randomActivity.innerHTML = `<p>${activity.activity}</p>`
+
+
+            //  })
 
             }
 
