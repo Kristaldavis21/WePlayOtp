@@ -1,19 +1,55 @@
-h1{
-    color: greenyellow;
-}
+body{
+    background: linear-gradient(-45deg, grey, blue, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+@keyframes gradient{
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
 
-marquee{
+
+  marquee{
     font-size: 100px;
     font-weight: 700;
-    color: limegreen;
-    background-color: #008cff;
+    color: darkslategrey;
     font-family: sans-serif;
     height: 100px;
     }
 
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-    }
-
-
     
+
+
+div#weatherRec {
+  position: absolute;
+  left: 700px;
+  font-size: 50px;
+  color: darkslategray;
+}
+
+
+
+.card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border: solid;
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-height: 600px) {
+  .example {font-style:green;}
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .example {orientation:landscape;}
+}

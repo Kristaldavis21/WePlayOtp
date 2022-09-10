@@ -4,7 +4,6 @@ function main() {
     const form = document.getElementById('search');
     const inputCity = document.getElementById('city');
     const inputState = document.getElementById('state');
-    // const inputID = document.getElementById('id');
     
     form.addEventListener('submit', (e) => {
         // capture the event and prevent default
@@ -25,8 +24,6 @@ function main() {
     
     });
     async function cityData(inputCityName, inputStateName) {
-        
-        // let key = "e1b480b407514a736d3c17c9bfa33c0cc"; 
 
         let key = "1b480b407514a736d3c17c9bfa33c0cc";
 
@@ -54,25 +51,25 @@ function main() {
 
                 const tempElement = document.getElementById('temp');
 
-                let locationIcon = document.getElementById('.weather-icon');
-                const icon = weather.weather[0].icon;
+                let locationIcon = document.getElementById('weather-icon');
+                const {icon} = weather.weather[0].icon;
 
                 tempElement.innerHTML = `<p>The temperature is... ${weather.main.temp} ${weather.weather[0].description}</p>`
                 locationIcon.innerHTML =`<img src="./icons/${weather.weather[0].icon}.png"</div>`;
              })
 
-            //  fetch(`http://www.boredapi.com/api/activity?type=recreational`)
-            //  .then((response) => response.json())
-            //  .then((activity) => {
+             fetch(`http://www.boredapi.com/api/activity?type=recreational`)
+             .then((response) => response.json())
+             .then((activity) => {
                  
-            //      console.log(activity);
+                 console.log(activity);
 
-            //      const randomActivity = document.getElementById('activity');
+                 const randomActivity = document.getElementById('activity');
 
-            //      randomActivity.innerHTML = `<p>${activity.activity}</p>`
+                 randomActivity.innerHTML = `<p>${activity.activity}</p>`
 
 
-            //  })
+             })
 
             }
 
