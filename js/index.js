@@ -54,7 +54,7 @@ function main() {
                 let locationIcon = document.getElementById('weather-icon');
                 const {icon} = weather.weather[0].icon;
 
-                tempElement.innerHTML = `<p>The temperature is... ${weather.main.temp} ${weather.weather[0].description}</p>`
+                tempElement.innerHTML = `<p>The temperature is... ${weather.main.temp}F ${weather.weather[0].description}</p>`
                 locationIcon.innerHTML =`<img src="./icons/${weather.weather[0].icon}.png"</div>`;
              })
 
